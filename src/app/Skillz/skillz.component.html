@@ -1,0 +1,15 @@
+<h1>Skills Page</h1>
+<button mat-raised button class="open" (click)="AddSkill()">+</button>
+<label for="newuser" class="labelNewSkill"> ADD NEW SKILL </label>
+
+<cdk-virtual-scroll-viewport itemSize="100" class="container">
+  <div *ngFor ="let item of skill">
+    <div *ngIf="!item.isedit">
+        <div>
+            <div class="itemSkill">{{item.skill}}</div>
+            <button mat-raised button class="itemEdit" (click)="ChangeSkill()">Edit</button>
+            <button mat-raised button class="itemEdit" (click)="openConfirmDlg()">Delete</button>
+        </div>
+    </div>
+  </div>
+</cdk-virtual-scroll-viewport>

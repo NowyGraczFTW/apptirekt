@@ -1,0 +1,29 @@
+.container {
+    margin-top: 180px;
+    margin-left: 260px;
+    width: 600px;
+    height: 400px;
+}
+
+.open {
+    border-radius: 1px;
+    margin-left: 130px;
+    position: relative;
+    top: 130px;
+}
+
+.labelNewSkill {
+    margin-left: 15px;
+    position: relative;
+    top: 130px;
+}
+
+.itemSkill {
+    float: left;
+    margin-right: 85px;
+    width: 100px;
+}
+
+.itemEdit {
+    margin-left: 20px;
+}

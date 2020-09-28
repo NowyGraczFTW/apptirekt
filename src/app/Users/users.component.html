@@ -1,0 +1,41 @@
+<h1>Users Page</h1>
+<button mat-raised button class="createNewUser" (click)="openDialog()">+</button>
+<label for="newuser" class="btnNewUser"> CREATE NEW USER </label>
+
+<cdk-virtual-scroll-viewport itemSize="100" class="container">
+  <mat-table>
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+    </ng-container>
+    <ng-container matColumnDef="surname">
+      <mat-header-cell *matHeaderCellDef> Surname </mat-header-cell>
+    </ng-container>
+    <ng-container matColumnDef="action1">
+      <mat-header-cell *matHeaderCellDef> Action1 </mat-header-cell>
+      <mat-cell *matCellDef="let row"></mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="action2">
+      <mat-header-cell *matHeaderCellDef> Action2 </mat-header-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+</mat-table>
+<div *ngFor ="let item of employee">
+  <div *ngIf="!item.isedit; else elseBlock">
+      <div>
+          <div class="itemName">{{item.name}}</div>
+          <div class="itemSurname">{{item.surname}}</div>
+          <a (click)="EditRecord(item)" class="itemEdit">Edit</a>
+          <a (click)= "Deleteemployee(item.id)">Delete</a>
+      </div>
+  </div>
+
+  <ng-template #elseBlock>
+    <input type="text" class="editItem" [(ngModel)]="item.editname">
+    <input type="text" class="editItem" [(ngModel)]="item.editsurname">
+    <input type="text" class="editItem" [(ngModel)]="item.editskill">
+    <input type="number" class="editItem" [(ngModel)]="item.editrating">
+    <a class="btn btn-warning btn-sm" (click)="Updatarecord(item)">Update Employee</a>
+    <a class="btn btn-dark btn-sm" (click)="item.isedit = false">Cancel</a>
+  </ng-template>
+</div>
+</cdk-virtual-scroll-viewport>

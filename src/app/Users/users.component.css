@@ -1,0 +1,69 @@
+.container {
+    font-size: 18px;
+    margin-top: 180px;
+    margin-left: 260px;
+    width: 600px;
+    height: 400px;
+}
+
+.createNewUser {
+    border-radius: 1px;
+    margin-left: 130px;
+    position: relative;
+    top: 130px;
+}
+
+.btnNewUser {
+    margin-left: 15px;
+    position: relative;
+    top: 130px;
+}
+
+table {
+    width: 100%;
+    height: 400px;
+}
+
+.itemName {
+    float: left;
+    margin-left: 25px;
+    margin-right: 60px;
+    width: 80px;
+}
+
+.itemSurname {
+    float: left;
+    margin-right: 30px;
+    width: 100px;
+}
+
+.itemSkill {
+    float: left;
+    margin-right: 85px;
+    width: 70px;
+}
+
+.itemRating {
+    float: left;
+    margin-right: 50px;
+    width: 10px;
+}
+
+.itemEdit {
+    float: left;
+    margin-left: 10px;
+    margin-right: 90px;
+    width: 60px;
+}
+
+.editItem {
+    width: 70px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.btn-sm {
+    padding: 5px;
+    margin-left: 10px;
+    font-size: 15px;
+}

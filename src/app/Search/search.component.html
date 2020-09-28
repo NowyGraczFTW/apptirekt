@@ -1,0 +1,55 @@
+<h1>Search Page</h1>
+<div id="topElements">
+  <div class="multiSelectUsers">
+    <label for="mat-form-field" class="usersLabel"> USERS </label><br/><br/>
+    <mat-form-field>
+    <mat-label>select user</mat-label>
+      <mat-select multiple>
+        <mat-option *ngFor ="let item of employee">{{item.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="multiSelectSkills">
+  <label for="mat-form-field" class="skillsLabel">SKILLS</label><br/><br/>
+  <mat-form-field>
+    <mat-label>select skills</mat-label>
+    <mat-select multiple>
+      <mat-option *ngFor ="let item of skill">{{item.skill}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  </div>
+</div>
+
+
+  <!--<input (keyup)="applyFilter($event.target.value)" matInput placeholder="Filter" class="filter">-->
+
+ <cdk-virtual-scroll-viewport itemSize="100" class="container">
+  <mat-table>
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+    </ng-container>
+    <ng-container matColumnDef="surname">
+      <mat-header-cell *matHeaderCellDef> Surname </mat-header-cell>
+    </ng-container>
+    <ng-container matColumnDef="skill">
+      <mat-header-cell *matHeaderCellDef> Skill </mat-header-cell>
+      <mat-cell *matCellDef="let row"></mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="rating">
+      <mat-header-cell *matHeaderCellDef> Rating </mat-header-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+</mat-table>
+
+      <div *ngFor ="let item of employee">
+        <div *ngIf="!item.isedit">
+            <div>
+                <div class="itemName">{{item.name}}</div>
+                <div class="itemSurname">{{item.surname}}</div>
+                <div class="itemSkill">{{item.skill}}</div>
+                <div class="itemRating">{{item.rating}}</div>
+            </div>
+        </div>
+      </div>
+</cdk-virtual-scroll-viewport>
+

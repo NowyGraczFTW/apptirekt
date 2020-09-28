@@ -1,0 +1,9 @@
+<p style="text-align: center">CONFIRM</p>
+
+<div *ngFor ="let item of skill">
+  <button class="btnYes" (click)="Deleteemployee(item.id) ; Deleteskill(item.id)">YES</button>
+  <button mat-raised button mat-dialog-close mat-dialog-close="false">NO</button>
+</div>
+
+  <!--<div *ngFor ="let item of employee"></div> 
+</div>-->

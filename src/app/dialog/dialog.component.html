@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="form-group">
+    <label for="name">Name: </label>
+    <input type="text" class="form-control" [(ngModel)]="employeeName" placeholder="Enter Employee Name">
+  </div>
+  <div class="form-group">
+    <label for="surname" >Surname: </label>
+    <input type="text" class="form-control" id="surname" [(ngModel)]="employeeSurname" placeholder="Enter Employee Surname">
+  </div>
+  <label for="skills" class="skills">Skills</label><br/>
+  <form class="skillForm">
+    <button mat-raised button id="addSkill" (click)="AddSkill()">+</button>
+    <label class="l1">Select skill</label>
+    <select>
+      <option *ngFor ="let item of skill">{{item.skill}}</option>
+    </select>
+    <ngb-rating name="rating" [max]="5" [(ngModel)]="skillRating" [readonly]="false"></ngb-rating>
+  </form>
+
+
+<hr><br/>
+<div class="form-group">
+    <button class="btn btn-primary" (click)="CreateRecord() ; closeDialog()" [disabled]="!employeeName || !employeeSurname || !employeeSkill">Save</button>
+    <button class="btn btn-primary" id="save" (click)="closeDialog()">Cancel</button>
+</div>

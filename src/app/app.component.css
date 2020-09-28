@@ -1,0 +1,12 @@
+.navbar.navbar-expand.navbar-dark{
+    background-color: #ff8f0e;
+}
+
+.jumbotron {
+    background-color: #D0D0D0;
+    max-height: 125px;
+}
+
+.active {
+    background-color:rgb(255, 175, 143);
+  }

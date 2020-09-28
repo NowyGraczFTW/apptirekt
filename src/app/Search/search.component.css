@@ -1,0 +1,66 @@
+.container {
+    margin-top: 20px;
+    margin-left: 150px;
+    width: 600px;
+    height: 400px;
+}
+
+#topElements {
+    margin-top: 50px;
+    height: 100px;
+}
+
+.usersLabel {
+    margin-right: 50px;
+    position: relative;
+    top: 20px;
+}
+
+.skillsLabel {
+    margin-right: 50px;
+    position: relative;
+    top: 20px;
+}
+
+.multiSelectUsers {
+    float: left;
+    margin-top: 50px;
+    margin-left: 170px;
+}
+
+.multiSelectSkills {
+    float: left;
+    margin-top: 50px;
+    margin-left: 200px;
+}
+
+.filter {
+    position: absolute;
+    top: 195px;
+    left: 220px;
+}
+
+.itemName {
+    float: left;
+    margin-left: 25px;
+    margin-right: 60px;
+    width: 80px;
+}
+
+.itemSurname {
+    float: left;
+    margin-right: 30px;
+    width: 100px;
+}
+
+.itemSkill {
+    float: left;
+    margin-right: 85px;
+    width: 70px;
+}
+
+.itemRating {
+    float: left;
+    margin-right: 50px;
+    width: 10px;
+}
